@@ -1,0 +1,1 @@
+{"jobID":"bb8dcd1c-3c92-f433-b2bb-dc756dee922d","spec":{"type":"policy","cause":{"Message":"","User":""},"spec":{"default:deployment/dealer":{"add":{"automated":"true"},"remove":{}}}},"result":null}
