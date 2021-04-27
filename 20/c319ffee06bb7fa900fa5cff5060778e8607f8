@@ -1,0 +1,1 @@
+{"jobID":"2bdf3ca9-71ef-5d21-3b0c-31bf8395f19a","spec":{"type":"policy","cause":{"Message":"","User":""},"spec":{"default:deployment/games":{"add":{},"remove":{"automated":"true"}}}},"result":null}
