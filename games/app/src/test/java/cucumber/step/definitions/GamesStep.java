@@ -47,6 +47,12 @@ public class GamesStep extends SpringIntegrationTest {
         testContext.setResponse(playResponse);
     }
 
+    @When("^I play from the bottom$")
+    public void iPlayFromTheBottom() {
+        ResponseEntity<String> playResponse = restUtils.get("/play-from-bottom");
+        testContext.setResponse(playResponse);
+    }
+
     @When("^I ask for all the games$")
     public void iAskForAllTheGames() {
         ResponseEntity<String> playResponse = restUtils.get("/games");
@@ -64,6 +70,19 @@ public class GamesStep extends SpringIntegrationTest {
         Game gameResponse = objectMapper.readValue(response.getBody(), Game.class);
         assertEquals(topCard1, gameResponse.getCard1());
         assertEquals(topCard2, gameResponse.getCard2());
+    }
+
+    @Then("^I get 2 cards from the bottom from a shuffled deck$")
+    public void iGetTwoCardsFromTheBottomFromAShuffledDeck() throws JsonProcessingException {
+        PlayingCard bottomCard1 = new PlayingCard(3, CardSuit.SPADES);
+        PlayingCard bottomCard2 = new PlayingCard(4, CardSuit.DIAMONDS);
+
+        WireMock.verify(1, WireMock.getRequestedFor(WireMock.urlMatching("/shuffled")));
+        ResponseEntity<String> response = testContext.getResponse();
+
+        Game gameResponse = objectMapper.readValue(response.getBody(), Game.class);
+        assertEquals(bottomCard1, gameResponse.getCard1());
+        assertEquals(bottomCard2, gameResponse.getCard2());
     }
 
     @Then("^I get a list of all played games$")
