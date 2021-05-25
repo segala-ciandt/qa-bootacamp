@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: games
-        image: 833104194858.dkr.ecr.us-east-1.amazonaws.com/qa-bootcamp_games:bbb30ba55bd1d0ba50907b889ac53f92449abe89
+        image: 833104194858.dkr.ecr.us-east-1.amazonaws.com/qa-bootcamp_games:10dbf787cbc51085a6b8ef16eeee93dc1a52dfc9
         ports:
         - containerPort: 8080
 ---
