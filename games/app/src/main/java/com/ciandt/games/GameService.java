@@ -39,7 +39,7 @@ public class GameService {
         }
 
         val card1 = playedDeck.get(0);
-        var card2 = playedDeck.get(1);
+        val card2 = playedDeck.get(1);
 
         return Game.builder().card1(card1).card2(card2).timestamp(Instant.now()).playedDeck(playedDeck).build();
     }
