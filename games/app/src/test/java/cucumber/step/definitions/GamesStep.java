@@ -86,6 +86,19 @@ public class GamesStep extends SpringIntegrationTest {
         assertEquals(bottomCard2, gameResponse.getCard2());
     }
 
+    @Given("^I have played games$")
+    public void iHavePlayedGames() {
+        Instant timestamp = Instant.now();
+        PlayingCard playedCard1 = new PlayingCard(1, CardSuit.CLUBS);
+        PlayingCard playedCard2 = new PlayingCard(2, CardSuit.HEARTS);
+        List<PlayingCard> playedDeck = Arrays.asList(playedCard1, playedCard2);
+
+        Game game1 = new Game(1L, timestamp, playedCard1, playedCard2, playedDeck);
+        Game game2 = new Game(2L, timestamp, playedCard1, playedCard2, playedDeck);
+        gameRepository.save(game1);
+        gameRepository.save(game2);
+    }
+
     @When("^I ask for all the games$")
     public void iAskForAllTheGames() {
         ResponseEntity<String> playResponse = restUtils.get("/games");
@@ -98,18 +111,5 @@ public class GamesStep extends SpringIntegrationTest {
         List<Game> gameList = objectMapper.readValue(response.getBody(), new TypeReference<List<Game>>() {
         });
         assertEquals(2, gameList.size());
-    }
-
-    @Given("^I have played games$")
-    public void iHavePlayedGames() {
-        Instant timestamp = Instant.now();
-        PlayingCard playedCard1 = new PlayingCard(1, CardSuit.CLUBS);
-        PlayingCard playedCard2 = new PlayingCard(2, CardSuit.HEARTS);
-        List<PlayingCard> playedDeck = Arrays.asList(playedCard1, playedCard2);
-
-        Game game1 = new Game(1L, timestamp, playedCard1, playedCard2, playedDeck);
-        Game game2 = new Game(2L, timestamp, playedCard1, playedCard2, playedDeck);
-        gameRepository.save(game1);
-        gameRepository.save(game2);
     }
 }
