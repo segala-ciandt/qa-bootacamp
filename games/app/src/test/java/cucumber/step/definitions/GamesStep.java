@@ -79,16 +79,18 @@ public class GamesStep extends SpringIntegrationTest {
         ResponseEntity<String> response = testContext.getResponse();
         Game gameResponse = objectMapper.readValue(response.getBody(), Game.class);
 
-        assertTrue(gameRepository.findAll().stream().allMatch(game -> game.getId().equals(gameResponse.getId())));
+        assertTrue(gameRepository
+                .findAll()
+                .stream()
+                .anyMatch(game ->
+                        game.getCard1().equals(gameResponse.getCard1())
+                                && game.getId().equals(gameResponse.getId())));
 
         assertTrue(gameRepository
                 .findAll()
                 .stream()
-                .anyMatch(game -> game.getCard1().equals(gameResponse.getCard1())));
-
-        assertTrue(gameRepository
-                .findAll()
-                .stream()
-                .anyMatch(game -> game.getCard2().equals(gameResponse.getCard2())));
+                .anyMatch(game ->
+                        game.getCard2().equals(gameResponse.getCard2())
+                                && game.getId().equals(gameResponse.getId())));
     }
 }
