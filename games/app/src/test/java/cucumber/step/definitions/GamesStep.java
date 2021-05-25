@@ -20,6 +20,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 @AllArgsConstructor
@@ -34,8 +35,8 @@ public class GamesStep extends SpringIntegrationTest {
         PlayingCard playedCard2 = new PlayingCard(2, CardSuit.HEARTS);
         List<PlayingCard> playedDeck = Arrays.asList(playedCard1, playedCard2);
 
-        Game game1 = new Game(1L,timestamp,playedCard1,playedCard2,playedDeck);
-        Game game2 = new Game(2L,timestamp,playedCard1,playedCard2,playedDeck);
+        Game game1 = new Game(1L, timestamp, playedCard1, playedCard2, playedDeck);
+        Game game2 = new Game(2L, timestamp, playedCard1, playedCard2, playedDeck);
         gameRepository.save(game1);
         gameRepository.save(game2);
     }
@@ -68,7 +69,8 @@ public class GamesStep extends SpringIntegrationTest {
     @Then("^I get a list of all played games$")
     public void iGetAListOfALlPlayedGames() throws JsonProcessingException {
         ResponseEntity<String> response = testContext.getResponse();
-        List<Game> gameList = objectMapper.readValue(response.getBody(), new TypeReference<List<Game>>() {});
+        List<Game> gameList = objectMapper.readValue(response.getBody(), new TypeReference<List<Game>>() {
+        });
         assertEquals(2, gameList.size());
     }
 
@@ -77,10 +79,18 @@ public class GamesStep extends SpringIntegrationTest {
         ResponseEntity<String> response = testContext.getResponse();
         Game gameResponse = objectMapper.readValue(response.getBody(), Game.class);
 
-        gameRepository.findAll().stream().allMatch(gameCard -> gameCard.getId().equals(gameResponse.getId()));
-        gameRepository.findAll().stream().anyMatch(gameCard -> gameCard.equals(gameResponse.getCard1()));
-        gameRepository.findAll().stream().anyMatch(gameCard -> gameCard.equals(gameResponse.getCard2()));
+        assertTrue(gameRepository
+                .findAll()
+                .stream()
+                .anyMatch(game ->
+                        game.getCard1().equals(gameResponse.getCard1())
+                                && game.getId().equals(gameResponse.getId())));
+
+        assertTrue(gameRepository
+                .findAll()
+                .stream()
+                .anyMatch(game ->
+                        game.getCard2().equals(gameResponse.getCard2())
+                                && game.getId().equals(gameResponse.getId())));
     }
-
-
 }
