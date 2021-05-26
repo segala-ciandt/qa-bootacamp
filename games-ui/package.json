@@ -71,6 +71,6 @@
     "cypress-cucumber-preprocessor": "^1.16.2"
   },
   "cypress-cucumber-preprocessor": {
-    "step_definitions": "cypress/implementation/step-definitions/"
+    "step_definitions": "cypress/support/step-definitions/"
   }
 }
