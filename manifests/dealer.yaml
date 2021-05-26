@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: dealer
-        image: 833104194858.dkr.ecr.us-east-1.amazonaws.com/qa-bootcamp_dealer:e7b6602a3346900ba8ea88302b752d91ad7a9363
+        image: 833104194858.dkr.ecr.us-east-1.amazonaws.com/qa-bootcamp_dealer:a99a33fd22c1282ba15fcaa5bb269d16be5adbe8
         ports:
         - containerPort: 8080
 ---
