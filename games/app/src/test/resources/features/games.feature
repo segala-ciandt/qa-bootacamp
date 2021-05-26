@@ -5,6 +5,7 @@ Feature: Games
     Then I get 2 cards from the top from a shuffled deck
     And game cards are saved
 
+  @ignore
   Scenario: Should get two bottom cards from a shuffled deck
     When I play from the bottom
     Then I get 2 cards from the bottom from a shuffled deck
