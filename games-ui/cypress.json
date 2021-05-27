@@ -1,0 +1,5 @@
+{
+    "defaultCommandTimeout" : 5000,
+    "testFiles": "**/*.feature",
+    "baseUrl": "http://localhost:4200"
+}

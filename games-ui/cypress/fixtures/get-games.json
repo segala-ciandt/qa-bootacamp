@@ -1,0 +1,224 @@
+[
+    {
+        "id": 1,
+        "timestamp": "2021-04-28T20:40:54Z",
+        "card1": {
+            "value": 2,
+            "suit": "SPADES"
+        },
+        "card2": {
+            "value": 2,
+            "suit": "CLUBS"
+        },
+        "playedDeck": [
+            {
+              "value": 6,
+              "suit": "SPADES"
+            },
+            {
+              "value": 11,
+              "suit": "SPADES"
+            },
+            {
+              "value": 6,
+              "suit": "CLUBS"
+            },
+            {
+              "value": 11,
+              "suit": "DIAMONDS"
+            },
+            {
+              "value": 9,
+              "suit": "SPADES"
+            },
+            {
+              "value": 9,
+              "suit": "CLUBS"
+            },
+            {
+              "value": 8,
+              "suit": "HEARTS"
+            },
+            {
+              "value": 2,
+              "suit": "SPADES"
+            },
+            {
+              "value": 3,
+              "suit": "CLUBS"
+            },
+            {
+              "value": 4,
+              "suit": "SPADES"
+            },
+            {
+              "value": 4,
+              "suit": "CLUBS"
+            },
+            {
+              "value": 7,
+              "suit": "SPADES"
+            },
+            {
+              "value": 2,
+              "suit": "DIAMONDS"
+            },
+            {
+              "value": 13,
+              "suit": "CLUBS"
+            },
+            {
+              "value": 10,
+              "suit": "CLUBS"
+            },
+            {
+              "value": 1,
+              "suit": "SPADES"
+            },
+            {
+              "value": 5,
+              "suit": "HEARTS"
+            },
+            {
+              "value": 3,
+              "suit": "HEARTS"
+            },
+            {
+              "value": 10,
+              "suit": "SPADES"
+            },
+            {
+              "value": 13,
+              "suit": "DIAMONDS"
+            },
+            {
+              "value": 11,
+              "suit": "CLUBS"
+            },
+            {
+              "value": 5,
+              "suit": "CLUBS"
+            },
+            {
+              "value": 1,
+              "suit": "DIAMONDS"
+            },
+            {
+              "value": 2,
+              "suit": "HEARTS"
+            },
+            {
+              "value": 9,
+              "suit": "DIAMONDS"
+            },
+            {
+              "value": 8,
+              "suit": "SPADES"
+            },
+            {
+              "value": 6,
+              "suit": "DIAMONDS"
+            },
+            {
+              "value": 8,
+              "suit": "CLUBS"
+            },
+            {
+              "value": 1,
+              "suit": "CLUBS"
+            },
+            {
+              "value": 4,
+              "suit": "HEARTS"
+            },
+            {
+              "value": 7,
+              "suit": "HEARTS"
+            },
+            {
+              "value": 7,
+              "suit": "DIAMONDS"
+            },
+            {
+              "value": 1,
+              "suit": "HEARTS"
+            },
+            {
+              "value": 11,
+              "suit": "HEARTS"
+            },
+            {
+              "value": 2,
+              "suit": "CLUBS"
+            },
+            {
+              "value": 13,
+              "suit": "HEARTS"
+            },
+            {
+              "value": 5,
+              "suit": "SPADES"
+            },
+            {
+              "value": 10,
+              "suit": "DIAMONDS"
+            },
+            {
+              "value": 12,
+              "suit": "SPADES"
+            },
+            {
+              "value": 5,
+              "suit": "DIAMONDS"
+            },
+            {
+              "value": 9,
+              "suit": "HEARTS"
+            },
+            {
+              "value": 13,
+              "suit": "SPADES"
+            },
+            {
+              "value": 10,
+              "suit": "HEARTS"
+            },
+            {
+              "value": 3,
+              "suit": "SPADES"
+            },
+            {
+              "value": 4,
+              "suit": "DIAMONDS"
+            },
+            {
+              "value": 12,
+              "suit": "CLUBS"
+            },
+            {
+              "value": 12,
+              "suit": "DIAMONDS"
+            },
+            {
+              "value": 12,
+              "suit": "HEARTS"
+            },
+            {
+              "value": 6,
+              "suit": "HEARTS"
+            },
+            {
+              "value": 7,
+              "suit": "CLUBS"
+            },
+            {
+              "value": 8,
+              "suit": "DIAMONDS"
+            },
+            {
+              "value": 3,
+              "suit": "DIAMONDS"
+            }
+          ]
+    }
+]
